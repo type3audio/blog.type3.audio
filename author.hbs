@@ -1,7 +1,7 @@
 {{!< default}}
 
 <main id="gh-main" class="gh-main gh-canvas">
-    {{#author}}
+    {{#primary_author}}
         <section class="gh-pagehead">
             {{#if profile_image}}
                 <img class="gh-author-image gh-pagehead-image" src="{{profile_image}}" alt="{{name}}">
@@ -34,7 +34,7 @@
                 </div>
             </header>
         </section>
-    {{/author}}
+    {{/primary_author}}
 
     <div class="gh-feed">
         {{#foreach posts}}
