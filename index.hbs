@@ -31,25 +31,18 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">More issues</h2>
+                <h2 class="gh-section-title">More posts</h2>
 
                 <div class="gh-feed">
-                    {{^is "paged"}}
-                        {{#foreach posts from="2"}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{else}}
-                        {{#foreach posts}}
-                            {{> loop}}
-                        {{/foreach}}
-                    {{/is}}
+                    {{#foreach posts}}
+                        {{> loop}}
+                    {{/foreach}}
                 </div>
 
                 {{#match posts.length "=" 1}}
-                    Additional issues will be published soon.
+                    Additional posts will be published soon.
                 {{/match}}
 
-                <button class="gh-loadmore gh-btn">Load more issues</button>
             </section>
 
             <aside class="gh-sidebar">
@@ -74,7 +67,7 @@
                         {{^if @member.paid}}
                             <div class="gh-signup">
                                 {{^if @member}}
-                                    <p class="gh-signup-description">Sign up now to get access to the library of members-only issues.</p>
+                                    <p class="gh-signup-description">Sign up now to get access to the library of members-only posts.</p>
 
                                     <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
                                         <div class="gh-subscribe-input-text">
